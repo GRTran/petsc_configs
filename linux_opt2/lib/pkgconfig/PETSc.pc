@@ -1,0 +1,17 @@
+prefix=/home/gre18/Documents/Codes/Fortran-Codes/PETSc/linux_opt2
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${prefix}/lib
+ccompiler=mpicc
+cflags_extra=-fPIC -Wall -Wwrite-strings -Wno-strict-aliasing -Wno-unknown-pragmas -fstack-protector -fvisibility=hidden -g -O
+cflags_dep=-MMD -MP
+ldflag_rpath=-Wl,-rpath,
+fcompiler=mpif90
+fflags_extra=-fPIC -Wall -ffree-line-length-0 -Wno-unused-dummy-argument -g -O2
+
+Name: PETSc
+Description: Library to solve ODEs and algebraic equations
+Version: 3.11.1
+Cflags:  -I${includedir}
+Libs: -L${libdir} -lpetsc
+Libs.private: -L/usr/lib/openmpi/lib -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/x86_64-linux-gnu -L/lib/x86_64-linux-gnu -llapack -lblas -lm -lX11 -lstdc++ -ldl -lmpi_usempif08 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi -lgfortran -lm -lgfortran -lm -lgcc_s -lquadmath -lpthread -lstdc++ -ldl

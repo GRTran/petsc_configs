@@ -1,0 +1,1 @@
+static const char *petscconfigureoptions = "PETSC_ARCH=linux_opt2 --prefix=/home/gre18/Documents/Codes/Fortran-Codes/PETSc/linux_opt2 --with-cc=mpicc --with-cxx=mpicxx --with-fc=mpif90 --with-debugging=0 --with-x=1 --with-mpi=1 FOPTFLAGS=\"-g -O2\"";
